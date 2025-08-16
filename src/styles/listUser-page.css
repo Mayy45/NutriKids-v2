@@ -1,0 +1,26 @@
+.user-table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 50px auto;
+}
+
+.user-table th, .user-table td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.delete-user {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+

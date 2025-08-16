@@ -48,28 +48,28 @@ model User {
 }
 
 model SavedMenu {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
-  userId      String   @db.ObjectId
-  menuName    String
-  ingredients String
-  price       Float
-  protein     Float
-  karbohidrat Float
-  serat       Float
-  kalsium     Float
-  fosfor      Float
-  zat_besi    Float
-  natrium     Float
-  kalium      Float
-  tembaga     Float
-  seng        Float
-  vit_c       Float
-  air         Float
-  energi      Float
-  lemak_total Float
-  kategoriGizi    String?
-  statusGiziJson  Json?
-  createdAt   DateTime @default(now())
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId         String   @db.ObjectId
+  menuName       String
+  ingredients    String
+  price          Float
+  protein        Float
+  karbohidrat    Float
+  serat          Float
+  kalsium        Float
+  fosfor         Float
+  zat_besi       Float
+  natrium        Float
+  kalium         Float
+  tembaga        Float
+  seng           Float
+  vit_c          Float
+  air            Float
+  energi         Float
+  lemak_total    Float
+  kategoriGizi   String?
+  statusGiziJson Json?
+  createdAt      DateTime @default(now())
 
   user User @relation("UserSavedMenus", fields: [userId], references: [id_user])
 }

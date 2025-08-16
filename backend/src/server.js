@@ -3,7 +3,6 @@ const Hapi           = require('@hapi/hapi');
 const Inert          = require('@hapi/inert');
 const { PrismaClient } = require('@prisma/client');
 const Path           = require('path');
-
 const commentRoutes  = require('./routes/comment');
 const authRoutes     = require('./routes/auth');
 const userRoutes     = require('./routes/user');

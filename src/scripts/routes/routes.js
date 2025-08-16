@@ -6,6 +6,7 @@ import FoodInput from "../pages/food-input/food-input-page";
 import LoginPage from "../pages/auth/login-page";
 import RegisterPage from "../pages/auth/register-page";
 import FoodDetail from "../pages/food-input/food-detail";
+import TableUser from "../pages/user/listUser-page";
 
 const Routes = {
   "/": Home,
@@ -17,6 +18,7 @@ const Routes = {
   "/login": LoginPage,
   "/register": RegisterPage,
   "/food-detail": FoodDetail,
+  "/user": TableUser,
 };
 
 export default Routes;

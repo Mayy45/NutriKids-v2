@@ -15,6 +15,15 @@ export const ApiBackend = axios.create({
   withCredentials: true,
 });
 
+ApiBackend.interceptors.request.use((config) => {
+  const token = localStorage.getItem("authToken");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+
 export const ApiMl = axios.create({
   baseURL: ML_URL,
 });

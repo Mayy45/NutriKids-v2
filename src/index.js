@@ -9,6 +9,7 @@ import "./styles/contact-page.css";
 import "./styles/about-page.css";
 import "./styles/login-page.css";
 import "./styles/register-page.css";
+import "./styles/listUser-page.css";
 import App from "./scripts/app";
 
 document.addEventListener("DOMContentLoaded", () => {

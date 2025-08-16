@@ -45,9 +45,8 @@
         <a href="#/about"><i class="fas fa-info-circle"></i> Tentang</a>
         <a href="#/features"><i class="fas fa-list-ul"></i> Fitur</a>
         <a href="#/contact"><i class="fas fa-envelope"></i> Kontak</a>
-        <a href="#/food-detail" class="auth-required"
-          ><i class="fas fa-utensils"></i> Menu</a
-        >
+        <a href="#/food-detail" class="auth-required"><i class="fas fa-utensils"></i> Menu</a>
+        <a href="#/user" class="auth-user" style="display: none;"><i class="fas fa-database"></i>Data User</a>
         <a
           href="#/logout"
           id="logoutBtn"
@@ -89,6 +88,8 @@
         const authLinks = document.querySelectorAll(".auth-required");
         const guestLinks = document.querySelectorAll(".guest-only");
 
+        const dataUser = document.querySelector(".auth-user");
+
         if (token && user) {
           // Show auth-required, hide guest-only
           authLinks.forEach((link) => (link.style.display = "inline-block"));
@@ -96,6 +97,12 @@
 
           userNameSpan.textContent = `Hello, ${user.firstName || user.email}`;
           userNameSpan.style.display = "inline-block";
+
+          if (user.email === "admin@gmail.com") {
+            dataUser.style.display = "inline-block";
+          }else {
+            dataUser.style.display = "none";
+          }
         } else {
           // Hide auth-required, show guest-only
           authLinks.forEach((link) => (link.style.display = "none"));
@@ -115,6 +122,7 @@
           localStorage.removeItem("user");
           updateNavbar();
           window.location.hash = "#/login";
+          window.location.reload();
         });
       });
     </script>

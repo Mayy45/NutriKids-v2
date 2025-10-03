@@ -29,7 +29,7 @@ const sendEmail = async ({ nama, email_comment, pesan }) => {
 
   const mailOptions = {
     from: nama,
-    to: 'agienugroho1671@gmail.com',
+    to: 'pakrt556@gmail.com',
     replyTo: email_comment,     
     subject: 'Pesan dari Form NutriKidz',
     html: `
